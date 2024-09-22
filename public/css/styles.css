@@ -1,0 +1,62 @@
+/* public/css/styles.css */
+
+/* Optional: Customize card headers */
+.card-header {
+  background-color: #007bff !important;
+}
+
+/* Optional: Customize badges */
+.badge {
+  margin-right: 5px;
+}
+
+/* Optional: Adjust card heights */
+.card {
+  height: 100%;
+}
+
+/* Optional: Hover effect for app cards */
+.card:hover {
+  transform: scale(1.02);
+  transition: transform 0.2s;
+}
+
+/* Ensure the body has a light background */
+body {
+  background-color: #f8f9fa;
+}
+
+/* Optional: Style for "Unknown Project" */
+.card-header.bg-primary.text-white {
+  background-color: #6c757d !important; /* Gray color */
+}
+
+  #refresh-timer {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    font-weight: bold;
+  }
+
+/* public/css/styles.css */
+
+/* Zededa's Orange Color */
+.zededa-orange {
+  background-color: #FF6F00; /* Replace with Zededa's exact orange color */
+}
+
+.text-zededa-orange {
+  color: #FF6F00; /* For text elements that need to use Zededa's orange */
+}
+
+/* Adjust the size of the "Z" icon to match the existing rocket icon */
+.z-icon {
+  font-size: 1.5em; /* Adjust as needed to match the rocket icon size */
+  color: #FF6F00; /* Zededa's orange */
+  vertical-align: middle;
+}

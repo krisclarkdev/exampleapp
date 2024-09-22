@@ -1,0 +1,102 @@
+{
+  "grafana": {
+    "appId": "a423bb38-9735-45af-a55f-b684143d65c8",
+    "projectId": "f3da506e-65a9-41ab-ad1a-818dabc426a9",
+    "project": "edgeview",
+    "tags": {},
+    "deviceIds": "f10dd7c6-4fb7-4029-a4d7-9793cacb7194",
+    "title": "Grafana",
+    "description": "",
+    "networks": 0,
+    "drives": 0,
+    "cpus": 1,
+    "memory": 524288,
+    "category": "",
+    "os": "",
+    "appCategory": "",
+    "revision": {
+      "prev": "",
+      "curr": "5",
+      "createdAt": "2024-03-12T17:06:56.905310Z",
+      "createdBy": "kris@zededa.com",
+      "updatedAt": "2024-07-22T19:34:33.312204Z",
+      "updatedBy": "kris@zededa.com"
+    }
+  },
+  "grafana3": {
+    "appId": "e8ad53df-16e4-43e9-8be1-0f1039e32548",
+    "projectId": "f3da506e-65a9-41ab-ad1a-818dabc426a9",
+    "project": "edgeview",
+    "tags": {
+      "test": "testValue"
+    },
+    "deviceIds": "75c40e36-6b08-4f2d-8e20-3e135b6fcbda",
+    "title": "grafana3",
+    "description": "",
+    "networks": 0,
+    "drives": 0,
+    "cpus": 1,
+    "memory": 524288,
+    "category": "",
+    "os": "",
+    "appCategory": "",
+    "revision": {
+      "prev": "",
+      "curr": "1",
+      "createdAt": "2024-07-22T19:35:16.669491Z",
+      "createdBy": "kris@zededa.com",
+      "updatedAt": "2024-07-22T19:35:16.669491Z",
+      "updatedBy": "kris@zededa.com"
+    }
+  },
+  "kubernetes": {
+    "appId": "7975e9a0-9821-45ee-ae4d-47f784cdbed8",
+    "projectId": "f3da506e-65a9-41ab-ad1a-818dabc426a9",
+    "project": "edgeview",
+    "tags": {
+      "edgeview": "true"
+    },
+    "deviceIds": "074068fe-5145-411d-9874-e3aad902a7c2",
+    "title": "Kubernetes",
+    "description": "",
+    "networks": 0,
+    "drives": 0,
+    "cpus": 4,
+    "memory": 8388608,
+    "category": "",
+    "os": "",
+    "appCategory": "",
+    "revision": {
+      "prev": "",
+      "curr": "41",
+      "createdAt": "2024-06-27T14:42:15.141456Z",
+      "createdBy": "kris@zededa.com",
+      "updatedAt": "2024-07-03T22:22:19.349177Z",
+      "updatedBy": "kris@zededa.com"
+    }
+  },
+  "snapshot_demo": {
+    "appId": "b15da09b-578d-4dd1-a251-9fc425514f47",
+    "projectId": "f3da506e-65a9-41ab-ad1a-818dabc426a9",
+    "project": "edgeview",
+    "tags": {},
+    "deviceIds": "c854cbe4-1357-4bdb-9a21-fffdf00e8bd7",
+    "title": "Snapshot_Demo",
+    "description": "",
+    "networks": 0,
+    "drives": 0,
+    "cpus": 2,
+    "memory": 4194304,
+    "category": "",
+    "os": "",
+    "appCategory": "",
+    "revision": {
+      "prev": "",
+      "curr": "15",
+      "createdAt": "2024-07-08T17:51:20.058528Z",
+      "createdBy": "kris@zededa.com",
+      "updatedAt": "2024-08-26T18:54:40.144199Z",
+      "updatedBy": "johnk-setraining@zededa.com"
+    }
+  }
+}
