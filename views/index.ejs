@@ -119,7 +119,7 @@
                               <button 
                                 class="btn btn-danger btn-sm action-btn" 
                                 data-app-id="<%= app.appId %>" 
-                                data-action="stop" 
+                                data-action="deactivate" 
                                 title="Stop"
                                 <% if (isOffline) { %> disabled <% } %>
                                 aria-label="Stop <%= app.title %>"
@@ -144,7 +144,7 @@
   <!-- Bootstrap JS Bundle with Popper -->
   <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
   <!-- Action Buttons JavaScript -->
-  <script src="js/actions.js"></script>
+  <script src="js/publicjsactions.js"></script>
   <!-- Refreshing Data JavaScript -->
   <script src="js/refresh.js"></script>
 </body>

@@ -248,6 +248,68 @@ app.get('/api/apps', async (req, res) => {
   }
 });
 
+/**
+ *  API Route to get app details by app ID
+ */
+async function getAppDetails(appId) {
+  try {
+    const response1 = axios.get(`${baseURL}/v1/apps/instances`, {headers});
+
+    return response1;
+  } catch (error) {
+    console.error('Error retrieving app details:', error.response ? error.response.data : error.message);
+    throw error;
+  }
+}
+
+/**
+ * API Route to preform some action on an app
+ */
+app.post('/api/action/:id/:action', (req, res) => {
+  const action = req.params.action;
+  const id = req.params.id;
+  correctid = '';
+
+  // Get all details of the app by using the ID
+  appDetails = getAppDetails(req.params.id);
+
+  // Translate the App ID to the ID otherwise we cant preform some action
+  correctID = new Promise((resolve, reject)=>{
+    appDetails.then((apps)=>{
+      apps.data.list.forEach((app)=>{
+        if(id == app.appId) {
+          resolve(app.id)      
+        }
+      })
+    });
+  }).catch((err)=>{
+    reject(err)
+  })
+
+  // After we've translated the ID, preform the action using the correct one
+  correctID.then((cid)=>{
+    try {
+      correctid = getAppDetails(req.params.id);
+    }catch(e){
+      throw e;
+    }
+
+    console.log(`${baseURL}/v1/apps/instances/id/${id}/${action}`)
+    try {
+      const response = axios.put(`${baseURL}/v1/apps/instances/id/${cid}/${action}`, null, {headers});
+      console.log(`App instance ${action}ed successfully:`, response.data);
+      res.status(200).json(response.data)
+    } catch (error) {
+      console.error(
+        'Error deactivating app instance:',
+        error.response ? error.response.data : error.message
+      );
+      throw error;
+    }
+  });
+});
+
+
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);

@@ -5,11 +5,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   actionButtons.forEach(button => {
     button.addEventListener('click', async () => {
+      console.log('click')
       const appId = button.getAttribute('data-app-id');
       const action = button.getAttribute('data-action');
 
       try {
-        const response = await fetch(`/app/${appId}/${action}`, {
+        console.log(`/v1/apps/instances/id/${appId}/${action}`)
+        //const response = await fetch(`/apps/${appId}/${action}`, {
+        const response = await fetch(`/api/action/${appId}/${action}`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -19,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const result = await response.json();
 
         if (response.ok) {
-          alert(result.message);
+          //alert(result.message);
         } else {
           alert(`Error: ${result.error}`);
         }
@@ -64,8 +67,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (response.ok) {
         // Optionally, display a success message using Bootstrap Toasts or Alerts
-        console.log(result.message);
-        alert(result.message);
+        //console.log(result.message);
+        //alert(result.message);
         // Optionally, refetch data to update button states
         fetchAppData();
       } else {
